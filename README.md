@@ -1,7 +1,15 @@
+
+
 # Hacker News AI tools
 
 This will be a collection of AI tools for Hacker News in FUTURE.
 But it's not future yet, so now you can use it to switch themes and highlight top posts.
+
+## Screenshots
+
+| Extension Popup | Hacker News Dark Mode |
+|:---:|:---:|
+| ![Extension](img/ext.png) | ![Hacker News](img/hn.png) |
 
 ## Features
 
