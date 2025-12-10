@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Hacker News Theme Switcher",
+  "version": "1.0",
+  "description": "Switch between light and dark themes on Hacker News",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "js": ["content.js"],
+      "css": ["dark-theme.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

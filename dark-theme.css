@@ -1,0 +1,150 @@
+.dark-theme body {
+	background-color: #0d1117 !important;
+	color: #c9d1d9 !important;
+}
+
+.dark-theme #hnmain {
+	background-color: #0d1117 !important;
+}
+
+.dark-theme table {
+	background-color: #0d1117 !important;
+}
+
+.dark-theme td {
+	background-color: #0d1117 !important;
+}
+
+/* Top navigation bar */
+.dark-theme .pagetop,
+.dark-theme .pagetop a {
+	color: #c9d1d9 !important;
+}
+
+/* Story titles - softer blue-gray */
+.dark-theme a:link,
+.dark-theme .storylink {
+	color: #608db4 !important;
+	text-decoration: none !important;
+}
+
+.dark-theme .storylink:hover {
+	text-decoration: underline !important;
+}
+
+/* Visited links - dimmer gray */
+.dark-theme a:visited {
+	color: #7a8a99 !important;
+	text-decoration: none !important;
+}
+
+/* Comment text */
+.dark-theme .comment,
+.dark-theme .comment * {
+	color: #c9d1d9 !important;
+	line-height: 1.6 !important;
+}
+
+.dark-theme .commtext {
+	color: #c9d1d9 !important;
+}
+
+.dark-theme .commtext * {
+	color: #c9d1d9 !important;
+}
+
+/* Links in comments - same soft blue-gray */
+.dark-theme .commtext a {
+	color: #608db4 !important;
+	text-decoration: none !important;
+}
+
+.dark-theme .commtext a:hover {
+	text-decoration: underline !important;
+}
+
+/* Comment metadata */
+.dark-theme .comhead,
+.dark-theme .comhead a {
+	color: #8b949e !important;
+	text-decoration: none !important;
+}
+
+/* Usernames */
+.dark-theme .hnuser {
+	color: #608db4 !important;
+	text-decoration: none !important;
+}
+
+/* Story metadata */
+.dark-theme .subtext,
+.dark-theme .subtext a {
+	color: #8b949e !important;
+	font-size: 8pt;
+	text-decoration: none !important;
+}
+
+.dark-theme .subtext a:hover {
+	text-decoration: underline !important;
+}
+
+/* Input fields */
+.dark-theme input,
+.dark-theme textarea {
+	background-color: #161b22 !important;
+	color: #c9d1d9 !important;
+	border: 1px solid #30363d !important;
+}
+
+/* Active/selected navigation */
+.dark-theme .topsel a {
+	color: #ffffff !important;
+}
+
+/* Code blocks */
+.dark-theme pre {
+	background-color: #161b22 !important;
+	color: #c9d1d9 !important;
+	padding: 8px !important;
+	border-radius: 6px !important;
+	border: 1px solid #30363d !important;
+}
+
+.dark-theme code {
+	color: #608db4 !important;
+	background-color: #161b22 !important;
+	padding: 2px 4px !important;
+	border-radius: 3px !important;
+}
+
+/* Reply links */
+.dark-theme .reply a {
+	color: #8b949e !important;
+	text-decoration: none !important;
+}
+
+.dark-theme .reply a:hover {
+	text-decoration: underline !important;
+}
+
+/* Domain names */
+.dark-theme .sitebit,
+.dark-theme .sitebit a {
+	color: #8b949e !important;
+	text-decoration: none !important;
+}
+
+/* Vote arrows */
+.dark-theme .votelinks {
+	opacity: 0.8;
+}
+
+/* Separators */
+.dark-theme hr {
+	border-color: #30363d !important;
+}
+
+/* Comment indentation */
+.dark-theme .comment {
+	border-left: 1px solid #21262d !important;
+}
