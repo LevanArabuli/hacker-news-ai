@@ -1,31 +1,41 @@
-/* 
- * HN Dark Mode - Sleek Dark Theme
- * Color palette inspired by modern dark UI design
- */
+:root.dark-theme {
+	--bg-gradient: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+	--bg-surface: transparent;
+	--bg-nav: linear-gradient(90deg, #0f3460 0%, #1a1a2e 100%);
+	--text-primary: #e0e0e0;
+	--text-secondary: #a0a0a0;
+	--text-muted: #666;
+	--text-subtle: #888;
+	--accent: #4da8da;
+	--accent-strong: #cf6679;
+	--accent-stronger: #d4740c;
+	--visited: #6a7a8a;
+	--visited-hover: #8a9aaa;
+	--border: #0f3460;
+	--panel: rgba(15, 52, 96, 0.3);
+	--panel-strong: rgba(15, 52, 96, 0.5);
+	--shadow-strong: rgba(233, 69, 96, 0.3);
+	--code-bg: rgba(233, 69, 96, 0.1);
+	--hover: #6bc5f8;
+}
 
-/* Base colors */
 .dark-theme body {
-	background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+	background: var(--bg-gradient) !important;
 	background-attachment: fixed !important;
-	color: #e0e0e0 !important;
+	color: var(--text-primary) !important;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
 }
 
-.dark-theme #hnmain {
-	background: transparent !important;
+.dark-theme table,
+.dark-theme td,
+.dark-theme #hnmain,
+.dark-theme .spacer,
+.dark-theme .comment-tree {
+	background: var(--bg-surface) !important;
 }
 
-.dark-theme table {
-	background: transparent !important;
-}
-
-.dark-theme td {
-	background: transparent !important;
-}
-
-/* Top navigation bar - make it stand out */
 .dark-theme > tbody > tr:first-child td {
-	background: linear-gradient(90deg, #0f3460 0%, #1a1a2e 100%) !important;
+	background: var(--bg-nav) !important;
 }
 
 .dark-theme .pagetop {
@@ -34,100 +44,89 @@
 }
 
 .dark-theme .pagetop a {
-	color: #a0a0a0 !important;
+	color: var(--text-secondary) !important;
 	transition: color 0.2s !important;
 }
 
 .dark-theme .pagetop a:hover {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 }
 
-/* HN Logo text */
 .dark-theme .pagetop b a {
-	color: #cf6679 !important;
+	color: var(--accent-strong) !important;
 	font-weight: 700 !important;
 }
 
-/* Story titles - cyan accent */
 .dark-theme .titleline a {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 	text-decoration: none !important;
 	transition: color 0.2s !important;
 }
 
 .dark-theme .titleline a:hover {
-	color: #6bc5f8 !important;
+	color: var(--hover) !important;
 }
 
-/* Visited story titles - muted */
 .dark-theme .titleline a:visited {
-	color: #6a7a8a !important;
+	color: var(--visited) !important;
 }
 
 .dark-theme .titleline a:visited:hover {
-	color: #8a9aaa !important;
+	color: var(--visited-hover) !important;
 }
 
-/* Story rank numbers */
-.dark-theme .rank {
-	color: #cf6679 !important;
+.dark-theme .rank,
+.dark-theme .score,
+.dark-theme .togg,
+.dark-theme .topsel a,
+.dark-theme .votelinks .nosee {
+	color: var(--accent-strong) !important;
 	font-weight: 600 !important;
 }
 
-/* Domain names in parentheses */
 .dark-theme .sitebit,
 .dark-theme .sitebit a,
-.dark-theme .sitestr {
-	color: #666 !important;
+.dark-theme .sitestr,
+.dark-theme .age a,
+.dark-theme .reply a,
+.dark-theme .yclinks,
+.dark-theme .yclinks a {
+	color: var(--text-muted) !important;
 	text-decoration: none !important;
 }
 
-/* Story metadata row */
-.dark-theme .subtext {
-	color: #888 !important;
+.dark-theme .subtext,
+.dark-theme .comhead,
+.dark-theme .reply a {
+	color: var(--text-subtle) !important;
 	font-size: 9pt !important;
 }
 
-.dark-theme .subtext a {
-	color: #888 !important;
-	text-decoration: none !important;
+.dark-theme .subtext a,
+.dark-theme .comhead a,
+.dark-theme .reply a {
+	color: inherit !important;
 	transition: color 0.2s !important;
 }
 
-.dark-theme .subtext a:hover {
-	color: #4da8da !important;
+.dark-theme .subtext a:hover,
+.dark-theme .comhead a:hover,
+.dark-theme .reply a:hover {
+	color: var(--accent) !important;
 }
 
-/* Score/points - accent color */
-.dark-theme .score {
-	color: #cf6679 !important;
-	font-weight: 600 !important;
-}
-
-/* Usernames - cyan */
 .dark-theme .hnuser {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 	font-weight: 600 !important;
 	text-decoration: none !important;
 }
 
 .dark-theme .hnuser:hover {
-	color: #6bc5f8 !important;
+	color: var(--hover) !important;
 }
 
-/* Age/time links */
-.dark-theme .age a {
-	color: #666 !important;
-}
-
-/* Comment section */
-.dark-theme .comment-tree {
-	background: transparent !important;
-}
-
-/* Comment text */
 .dark-theme .commtext {
-	color: #d0d0d0 !important;
+	color: var(--text-primary) !important;
 	line-height: 1.7 !important;
 	font-size: 10pt !important;
 }
@@ -136,119 +135,74 @@
 	color: inherit !important;
 }
 
-/* Links in comments */
 .dark-theme .commtext a {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 	text-decoration: none !important;
 	border-bottom: 1px dotted #4da8da40 !important;
 	transition: all 0.2s !important;
 }
 
 .dark-theme .commtext a:hover {
-	color: #6bc5f8 !important;
-	border-bottom-color: #6bc5f8 !important;
+	color: var(--hover) !important;
+	border-bottom-color: var(--hover) !important;
 }
 
-/* Comment header */
-.dark-theme .comhead {
-	color: #888 !important;
-	font-size: 9pt !important;
+.dark-theme .commtext p:first-child {
+	color: var(--text-secondary) !important;
 }
 
-.dark-theme .comhead a {
-	color: #888 !important;
-	text-decoration: none !important;
-}
-
-.dark-theme .comhead a:hover {
-	color: #4da8da !important;
-}
-
-/* Comment author */
-.dark-theme .comhead .hnuser {
-	color: #4da8da !important;
-	font-weight: 600 !important;
-}
-
-/* Toggle button */
-.dark-theme .togg {
-	color: #cf6679 !important;
-	font-weight: 600 !important;
-}
-
-/* Reply link */
-.dark-theme .reply a {
-	color: #666 !important;
-	font-size: 9pt !important;
-	text-decoration: none !important;
-}
-
-.dark-theme .reply a:hover {
-	color: #4da8da !important;
-}
-
-/* Comment row hover effect */
 .dark-theme tr.athing.comtr:hover > td {
 	background: rgba(255, 255, 255, 0.02) !important;
 }
 
-/* Quote text (starts with >) */
-.dark-theme .commtext p:first-child {
-	color: #a0a0a0 !important;
-}
-
-/* Code blocks */
 .dark-theme pre {
-	background: rgba(15, 52, 96, 0.5) !important;
-	color: #e0e0e0 !important;
+	background: var(--panel-strong) !important;
+	color: var(--text-primary) !important;
 	padding: 12px 16px !important;
 	border-radius: 6px !important;
-	border: 1px solid #0f3460 !important;
+	border: 1px solid var(--border) !important;
 	font-family: 'SF Mono', 'Fira Code', 'Monaco', monospace !important;
 	font-size: 9pt !important;
 	overflow-x: auto !important;
 }
 
 .dark-theme code {
-	color: #cf6679 !important;
-	background: rgba(233, 69, 96, 0.1) !important;
+	color: var(--accent-strong) !important;
+	background: var(--code-bg) !important;
 	padding: 2px 6px !important;
 	border-radius: 4px !important;
 	font-family: 'SF Mono', 'Fira Code', 'Monaco', monospace !important;
 	font-size: 0.9em !important;
 }
 
-/* Inline code in pre blocks should be normal */
 .dark-theme pre code {
-	color: #e0e0e0 !important;
+	color: var(--text-primary) !important;
 	background: transparent !important;
 	padding: 0 !important;
 }
 
-/* Input fields */
-.dark-theme input[type="text"],
-.dark-theme input[type="password"],
+.dark-theme input[type='text'],
+.dark-theme input[type='password'],
 .dark-theme textarea {
-	background: rgba(15, 52, 96, 0.3) !important;
-	color: #e0e0e0 !important;
-	border: 1px solid #0f3460 !important;
+	background: var(--panel) !important;
+	color: var(--text-primary) !important;
+	border: 1px solid var(--border) !important;
 	border-radius: 6px !important;
 	padding: 8px 12px !important;
 	font-size: 10pt !important;
 	transition: border-color 0.2s !important;
 }
 
-.dark-theme input[type="text"]:focus,
-.dark-theme input[type="password"]:focus,
+.dark-theme input[type='text']:focus,
+.dark-theme input[type='password']:focus,
 .dark-theme textarea:focus {
-	border-color: #4da8da !important;
+	border-color: var(--accent) !important;
 	outline: none !important;
 }
 
-/* Submit buttons */
-.dark-theme input[type="submit"] {
-	background: linear-gradient(135deg, #cf6679 0%, #b55a6a 100%) !important;
-	color: white !important;
+.dark-theme input[type='submit'] {
+	background: linear-gradient(135deg, var(--accent-strong) 0%, #b55a6a 100%) !important;
+	color: #fff !important;
 	border: none !important;
 	border-radius: 6px !important;
 	padding: 8px 16px !important;
@@ -257,35 +211,20 @@
 	transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
-.dark-theme input[type="submit"]:hover {
+.dark-theme input[type='submit']:hover {
 	transform: translateY(-1px) !important;
-	box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3) !important;
+	box-shadow: 0 4px 12px var(--shadow-strong) !important;
 }
 
-/* Active navigation item */
-.dark-theme .topsel a {
-	color: #cf6679 !important;
-	font-weight: 700 !important;
-}
-
-/* Separators */
-.dark-theme hr {
-	border: none !important;
-	border-top: 1px solid #0f3460 !important;
-	margin: 16px 0 !important;
-}
-
-/* More link at bottom */
 .dark-theme .morelink {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 	font-weight: 600 !important;
 }
 
 .dark-theme .morelink:hover {
-	color: #6bc5f8 !important;
+	color: var(--hover) !important;
 }
 
-/* Vote arrows - subtle glow on hover */
 .dark-theme .votearrow {
 	opacity: 0.6 !important;
 	transition: opacity 0.2s !important;
@@ -295,46 +234,35 @@
 	opacity: 1 !important;
 }
 
-/* Spacer/separator rows */
-.dark-theme .spacer {
-	background: transparent !important;
-}
-
-/* Comment indentation visual guide */
 .dark-theme .ind img {
 	opacity: 0.3 !important;
 }
 
-/* Dead/flagged comments */
-.dark-theme .dead {
-	color: #555 !important;
+.dark-theme .dead,
+.dark-theme .poll td,
+.dark-theme form table td {
+	color: var(--text-secondary) !important;
 }
 
-/* Poll options */
-.dark-theme .poll td {
-	color: #a0a0a0 !important;
+.dark-theme .job-title {
+	color: var(--accent) !important;
 }
 
-/* Footer */
-.dark-theme .yclinks {
-	color: #666 !important;
-}
-
-.dark-theme .yclinks a {
-	color: #666 !important;
+.dark-theme hr {
+	border: none !important;
+	border-top: 1px solid var(--border) !important;
+	margin: 16px 0 !important;
 }
 
 .dark-theme .yclinks a:hover {
-	color: #4da8da !important;
+	color: var(--accent) !important;
 }
 
-/* Selection color */
 .dark-theme ::selection {
 	background: #cf667940 !important;
 	color: #ffffff !important;
 }
 
-/* Scrollbar styling */
 .dark-theme ::-webkit-scrollbar {
 	width: 8px !important;
 	height: 8px !important;
@@ -350,25 +278,5 @@
 }
 
 .dark-theme ::-webkit-scrollbar-thumb:hover {
-	background: #4da8da !important;
-}
-
-/* Job listings */
-.dark-theme .job-title {
-	color: #4da8da !important;
-}
-
-/* Favorite star */
-.dark-theme .votelinks .nosee {
-	color: #cf6679 !important;
-}
-
-/* Error messages */
-.dark-theme font[color="red"] {
-	color: #cf6679 !important;
-}
-
-/* Forms and tables in submissions */
-.dark-theme form table td {
-	color: #a0a0a0 !important;
+	background: var(--accent) !important;
 }

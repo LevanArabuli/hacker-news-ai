@@ -1,0 +1,76 @@
+.popup {
+	width: 220px;
+	padding: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	color: #222;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(135deg, #fff7f0, #fff);
+}
+
+.popup__header {
+	margin: 0 0 12px;
+}
+
+.popup__title {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ff6600;
+}
+
+.popup__subtitle {
+	margin: 4px 0 0;
+	font-size: 12px;
+	color: #666;
+}
+
+.popup__actions {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.popup__button {
+	width: 100%;
+	padding: 10px 12px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.2s ease;
+}
+
+.popup__button--light {
+	background: linear-gradient(135deg, #ff9a3c, #ff6600);
+	color: #fff;
+	box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
+}
+
+.popup__button--dark {
+	background: linear-gradient(135deg, #1f2937, #111827);
+	color: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.popup__button:hover {
+	opacity: 0.95;
+}
+
+.popup__button:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+
+.popup__status {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: #555;
+	min-height: 16px;
+}
+

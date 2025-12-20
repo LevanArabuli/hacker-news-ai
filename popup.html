@@ -1,46 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			body {
-				width: 200px;
-				padding: 15px;
-				font-family: Arial, sans-serif;
-			}
-			button {
-				width: 100%;
-				padding: 10px;
-				margin: 5px 0;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-				font-size: 14px;
-			}
-			#light-btn {
-				background-color: #ff6600;
-				color: white;
-			}
-			#dark-btn {
-				background-color: #1a1a1a;
-				color: white;
-			}
-			button:hover {
-				opacity: 0.8;
-			}
-			#status {
-				margin-top: 10px;
-				text-align: center;
-				font-size: 12px;
-				color: #666;
-			}
-		</style>
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="popup.css" />
+		<title>HN Theme</title>
 	</head>
-	<body>
-		<h3 style="margin-top: 0">HN Theme</h3>
-		<button id="light-btn">Light Theme</button>
-		<button id="dark-btn">Dark Theme</button>
+	<body class="popup">
+		<header class="popup__header">
+			<h3 class="popup__title">HN Theme</h3>
+			<p class="popup__subtitle">Toggle between light and dark mode.</p>
+		</header>
 
-		<div id="status"></div>
+		<div class="popup__actions">
+			<button id="light-btn" class="popup__button popup__button--light">Light Theme</button>
+			<button id="dark-btn" class="popup__button popup__button--dark">Dark Theme</button>
+		</div>
+
+		<div id="status" class="popup__status" role="status" aria-live="polite"></div>
 		<script src="popup.js"></script>
 	</body>
 </html>
