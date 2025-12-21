@@ -1,5 +1,5 @@
 .popup {
-	width: 220px;
+	width: 240px;
 	padding: 16px;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	color: #222;
@@ -7,7 +7,7 @@
 
 body {
 	margin: 0;
-	background: linear-gradient(135deg, #fff7f0, #fff);
+	background: linear-gradient(135deg, #fff7f0 0%, #fff5f8 50%, #fff 100%);
 }
 
 .popup__header {
@@ -18,13 +18,17 @@ body {
 	margin: 0;
 	font-size: 16px;
 	font-weight: 700;
-	color: #ff6600;
+	background: linear-gradient(135deg, #ff6600 0%, #ff6154 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .popup__subtitle {
 	margin: 4px 0 0;
-	font-size: 12px;
+	font-size: 11px;
 	color: #666;
+	line-height: 1.4;
 }
 
 .popup__actions {
@@ -46,7 +50,7 @@ body {
 }
 
 .popup__button--light {
-	background: linear-gradient(135deg, #ff9a3c, #ff6600);
+	background: linear-gradient(135deg, #ff9a3c 0%, #ff6600 50%, #ff6154 100%);
 	color: #fff;
 	box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
 }
@@ -59,6 +63,7 @@ body {
 
 .popup__button:hover {
 	opacity: 0.95;
+	transform: translateY(-1px);
 }
 
 .popup__button:active {
@@ -69,8 +74,7 @@ body {
 .popup__status {
 	margin-top: 10px;
 	text-align: center;
-	font-size: 12px;
+	font-size: 11px;
 	color: #555;
 	min-height: 16px;
 }
-

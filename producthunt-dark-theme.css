@@ -1,0 +1,960 @@
+/* Product Hunt Dark Theme */
+:root.dark-theme {
+	--ph-bg-primary: #0f0f12;
+	--ph-bg-secondary: #18181c;
+	--ph-bg-tertiary: #1e1e24;
+	--ph-bg-elevated: #26262e;
+	--ph-bg-hover: #2a2a34;
+	--ph-text-primary: #f0f0f2;
+	--ph-text-secondary: #d0d0d8;
+	--ph-text-muted: #8a8a98;
+	--ph-accent: #ff6154;
+	--ph-accent-hover: #ff7b70;
+	--ph-accent-subtle: rgba(255, 97, 84, 0.15);
+	--ph-border: #2e2e38;
+	--ph-border-subtle: #242430;
+	--ph-upvote-bg: #26262e;
+	--ph-upvote-hover: #33333e;
+	--ph-shadow: rgba(0, 0, 0, 0.4);
+	--ph-tag-bg: #2a2a36;
+	--ph-tag-text: #b8b8c0;
+	--ph-link: #6e9fff;
+	--ph-link-hover: #8fb4ff;
+}
+
+/* Base styles */
+.dark-theme,
+.dark-theme body {
+	background-color: var(--ph-bg-primary) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+/* Main container and layout */
+.dark-theme #__next,
+.dark-theme [class*="styles_root"],
+.dark-theme [class*="styles_container"],
+.dark-theme [class*="styles_wrapper"],
+.dark-theme main,
+.dark-theme section,
+.dark-theme article,
+.dark-theme div {
+	background-color: transparent !important;
+}
+
+/* Header / Navigation */
+.dark-theme header,
+.dark-theme nav,
+.dark-theme [class*="Header"],
+.dark-theme [class*="Navbar"],
+.dark-theme [class*="navigation"],
+.dark-theme [class*="styles_header"],
+.dark-theme [class*="TopNav"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme header *,
+.dark-theme nav * {
+	color: var(--ph-text-primary) !important;
+}
+
+/* Navigation links */
+.dark-theme header a,
+.dark-theme nav a,
+.dark-theme [class*="navigation"] a {
+	color: var(--ph-text-secondary) !important;
+	transition: color 0.15s ease !important;
+}
+
+.dark-theme header a:hover,
+.dark-theme nav a:hover,
+.dark-theme [class*="navigation"] a:hover {
+	color: var(--ph-accent) !important;
+}
+
+/* Search */
+.dark-theme input[type="text"],
+.dark-theme input[type="search"],
+.dark-theme [class*="Search"],
+.dark-theme [class*="search"] input,
+.dark-theme input[placeholder*="Search"] {
+	background-color: var(--ph-bg-tertiary) !important;
+	color: var(--ph-text-primary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme input::placeholder {
+	color: var(--ph-text-muted) !important;
+}
+
+/* Product Cards */
+.dark-theme [class*="ProductCard"],
+.dark-theme [class*="productCard"],
+.dark-theme [class*="PostCard"],
+.dark-theme [class*="postCard"],
+.dark-theme [data-test*="post-item"],
+.dark-theme [class*="styles_item"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border-subtle) !important;
+}
+
+.dark-theme [class*="ProductCard"]:hover,
+.dark-theme [class*="productCard"]:hover,
+.dark-theme [class*="PostCard"]:hover,
+.dark-theme [class*="postCard"]:hover,
+.dark-theme [data-test*="post-item"]:hover,
+.dark-theme [class*="styles_item"]:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Product titles and links */
+.dark-theme [class*="ProductCard"] a,
+.dark-theme [class*="PostCard"] a,
+.dark-theme h1, .dark-theme h2, .dark-theme h3,
+.dark-theme h4, .dark-theme h5, .dark-theme h6 {
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme [class*="ProductCard"] a:hover,
+.dark-theme [class*="PostCard"] a:hover {
+	color: var(--ph-accent) !important;
+}
+
+/* Product descriptions */
+.dark-theme [class*="tagline"],
+.dark-theme [class*="description"],
+.dark-theme [class*="subtitle"],
+.dark-theme p {
+	color: #e8e8ec !important;
+}
+
+/* Product taglines - ensure high visibility */
+.dark-theme [class*="styles_tagline"],
+.dark-theme [class*="styles_description"],
+.dark-theme [data-test="post-tagline"],
+.dark-theme a + div,
+.dark-theme h3 + div,
+.dark-theme [class*="Post"] p,
+.dark-theme [class*="post"] p,
+.dark-theme [class*="Product"] p,
+.dark-theme [class*="product"] p {
+	color: #e0e0e6 !important;
+}
+
+/* Tags and categories */
+.dark-theme [class*="Topic"],
+.dark-theme [class*="topic"],
+.dark-theme [class*="Tag"],
+.dark-theme [class*="tag"],
+.dark-theme [class*="category"],
+.dark-theme [class*="Badge"],
+.dark-theme [href*="/topics/"] {
+	background-color: var(--ph-tag-bg) !important;
+	color: var(--ph-tag-text) !important;
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme [class*="Topic"]:hover,
+.dark-theme [class*="topic"]:hover,
+.dark-theme [class*="Tag"]:hover,
+.dark-theme [class*="tag"]:hover,
+.dark-theme [href*="/topics/"]:hover {
+	background-color: var(--ph-bg-hover) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+/* Upvote buttons */
+.dark-theme [class*="Upvote"],
+.dark-theme [class*="upvote"],
+.dark-theme [class*="Vote"],
+.dark-theme [class*="vote"],
+.dark-theme button[class*="vote"] {
+	background-color: var(--ph-upvote-bg) !important;
+	color: var(--ph-text-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme [class*="Upvote"]:hover,
+.dark-theme [class*="upvote"]:hover,
+.dark-theme [class*="Vote"]:hover,
+.dark-theme [class*="vote"]:hover,
+.dark-theme button[class*="vote"]:hover {
+	background-color: var(--ph-upvote-hover) !important;
+	border-color: var(--ph-accent) !important;
+}
+
+/* Comment count */
+.dark-theme [class*="Comment"],
+.dark-theme [class*="comment"] {
+	color: var(--ph-text-muted) !important;
+}
+
+/* Buttons */
+.dark-theme button,
+.dark-theme [class*="Button"],
+.dark-theme [role="button"] {
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme button[class*="primary"],
+.dark-theme [class*="Button"][class*="primary"] {
+	background-color: var(--ph-accent) !important;
+	color: #fff !important;
+}
+
+.dark-theme button[class*="primary"]:hover,
+.dark-theme [class*="Button"][class*="primary"]:hover {
+	background-color: var(--ph-accent-hover) !important;
+}
+
+.dark-theme button[class*="secondary"],
+.dark-theme [class*="Button"][class*="secondary"] {
+	background-color: var(--ph-bg-elevated) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Dropdowns and menus */
+.dark-theme [class*="Dropdown"],
+.dark-theme [class*="dropdown"],
+.dark-theme [class*="Menu"],
+.dark-theme [class*="menu"],
+.dark-theme [class*="Popover"],
+.dark-theme [class*="popover"],
+.dark-theme [role="menu"],
+.dark-theme [role="listbox"],
+.dark-theme [data-radix-popper-content-wrapper],
+.dark-theme [data-radix-menu-content],
+.dark-theme [data-state="open"],
+.dark-theme [class*="flyout"],
+.dark-theme [class*="Flyout"],
+.dark-theme [class*="overlay"] > div,
+.dark-theme [class*="Overlay"] > div {
+	background-color: var(--ph-bg-elevated) !important;
+	border-color: var(--ph-border) !important;
+	box-shadow: 0 4px 20px var(--ph-shadow) !important;
+}
+
+/* Navigation dropdown specifically */
+.dark-theme nav [class*="Dropdown"],
+.dark-theme nav [class*="dropdown"],
+.dark-theme header [class*="Dropdown"],
+.dark-theme header [class*="dropdown"],
+.dark-theme [class*="NavDropdown"],
+.dark-theme [class*="navDropdown"],
+.dark-theme [class*="NavigationMenu"],
+.dark-theme [class*="navigationMenu"],
+.dark-theme [class*="SubNav"],
+.dark-theme [class*="subnav"],
+.dark-theme [class*="megamenu"],
+.dark-theme [class*="MegaMenu"],
+.dark-theme [class*="mega-menu"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Dropdown menu items */
+.dark-theme [role="menuitem"],
+.dark-theme [role="option"],
+.dark-theme [class*="MenuItem"],
+.dark-theme [class*="menuItem"],
+.dark-theme [class*="DropdownItem"],
+.dark-theme [class*="dropdownItem"] {
+	color: var(--ph-text-primary) !important;
+	background-color: transparent !important;
+}
+
+.dark-theme [role="menuitem"]:hover,
+.dark-theme [role="option"]:hover,
+.dark-theme [class*="MenuItem"]:hover,
+.dark-theme [class*="menuItem"]:hover,
+.dark-theme [class*="DropdownItem"]:hover,
+.dark-theme [class*="dropdownItem"]:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Dropdown links */
+.dark-theme [class*="Dropdown"] a,
+.dark-theme [class*="dropdown"] a,
+.dark-theme [class*="Menu"] a,
+.dark-theme [class*="menu"] a,
+.dark-theme [class*="Popover"] a,
+.dark-theme [class*="popover"] a {
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme [class*="Dropdown"] a:hover,
+.dark-theme [class*="dropdown"] a:hover,
+.dark-theme [class*="Menu"] a:hover,
+.dark-theme [class*="menu"] a:hover {
+	color: var(--ph-accent) !important;
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Modal and dialogs */
+.dark-theme [class*="Modal"],
+.dark-theme [class*="modal"],
+.dark-theme [class*="Dialog"],
+.dark-theme [class*="dialog"],
+.dark-theme [role="dialog"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Sidebar */
+.dark-theme [class*="Sidebar"],
+.dark-theme [class*="sidebar"],
+.dark-theme aside {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Footer */
+.dark-theme footer,
+.dark-theme [class*="Footer"],
+.dark-theme [class*="footer"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+	color: var(--ph-text-muted) !important;
+}
+
+.dark-theme footer a,
+.dark-theme [class*="Footer"] a,
+.dark-theme [class*="footer"] a {
+	color: var(--ph-text-muted) !important;
+}
+
+.dark-theme footer a:hover,
+.dark-theme [class*="Footer"] a:hover,
+.dark-theme [class*="footer"] a:hover {
+	color: var(--ph-text-secondary) !important;
+}
+
+/* Dividers and borders */
+.dark-theme hr,
+.dark-theme [class*="Divider"],
+.dark-theme [class*="divider"] {
+	border-color: var(--ph-border) !important;
+	background-color: var(--ph-border) !important;
+}
+
+/* Cards and panels */
+.dark-theme [class*="Card"],
+.dark-theme [class*="card"],
+.dark-theme [class*="Panel"],
+.dark-theme [class*="panel"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border-subtle) !important;
+}
+
+/* Links */
+.dark-theme a {
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme a:hover {
+	color: var(--ph-accent) !important;
+}
+
+/* Text and labels */
+.dark-theme span,
+.dark-theme label {
+	color: inherit !important;
+}
+
+.dark-theme [class*="muted"],
+.dark-theme [class*="secondary"],
+.dark-theme [class*="subtle"] {
+	color: var(--ph-text-muted) !important;
+}
+
+/* Images - ensure product logos look good on dark bg */
+.dark-theme [class*="ProductImage"],
+.dark-theme [class*="productImage"],
+.dark-theme [class*="Avatar"],
+.dark-theme [class*="avatar"] {
+	border-color: var(--ph-border) !important;
+}
+
+/* Tooltips */
+.dark-theme [class*="Tooltip"],
+.dark-theme [class*="tooltip"],
+.dark-theme [role="tooltip"] {
+	background-color: var(--ph-bg-elevated) !important;
+	color: var(--ph-text-primary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Form elements */
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+	background-color: var(--ph-bg-tertiary) !important;
+	color: var(--ph-text-primary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus {
+	border-color: var(--ph-accent) !important;
+	outline: none !important;
+	box-shadow: 0 0 0 2px var(--ph-accent-subtle) !important;
+}
+
+/* Checkbox and radio */
+.dark-theme input[type="checkbox"],
+.dark-theme input[type="radio"] {
+	background-color: var(--ph-bg-tertiary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Loading states */
+.dark-theme [class*="Skeleton"],
+.dark-theme [class*="skeleton"],
+.dark-theme [class*="Loading"],
+.dark-theme [class*="loading"] {
+	background-color: var(--ph-bg-tertiary) !important;
+}
+
+/* Notification banners */
+.dark-theme [class*="Banner"],
+.dark-theme [class*="banner"],
+.dark-theme [class*="Alert"],
+.dark-theme [class*="alert"],
+.dark-theme [class*="Toast"],
+.dark-theme [class*="toast"] {
+	background-color: var(--ph-bg-elevated) !important;
+	border-color: var(--ph-border) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+/* Cookie banner */
+.dark-theme [class*="cookie"],
+.dark-theme [class*="Cookie"],
+.dark-theme [class*="consent"],
+.dark-theme [class*="Consent"] {
+	background-color: var(--ph-bg-elevated) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Scrollbar */
+.dark-theme ::-webkit-scrollbar {
+	width: 10px !important;
+	height: 10px !important;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+	background: var(--ph-bg-primary) !important;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+	background: var(--ph-bg-tertiary) !important;
+	border-radius: 5px !important;
+	border: 2px solid var(--ph-bg-primary) !important;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+	background: var(--ph-bg-hover) !important;
+}
+
+/* Selection */
+.dark-theme ::selection {
+	background: var(--ph-accent-subtle) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+/* Welcome banner override */
+.dark-theme [class*="Welcome"],
+.dark-theme [class*="welcome"],
+.dark-theme [class*="Hero"],
+.dark-theme [class*="hero"],
+.dark-theme [class*="Intro"],
+.dark-theme [class*="intro"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Tables */
+.dark-theme table,
+.dark-theme th,
+.dark-theme td,
+.dark-theme tr {
+	background-color: transparent !important;
+	border-color: var(--ph-border) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme tr:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Code blocks */
+.dark-theme pre,
+.dark-theme code,
+.dark-theme [class*="code"] {
+	background-color: var(--ph-bg-tertiary) !important;
+	color: var(--ph-accent) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Tabs */
+.dark-theme [class*="Tab"],
+.dark-theme [class*="tab"],
+.dark-theme [role="tab"] {
+	color: var(--ph-text-secondary) !important;
+}
+
+.dark-theme [class*="Tab"][class*="active"],
+.dark-theme [class*="tab"][class*="active"],
+.dark-theme [role="tab"][aria-selected="true"] {
+	color: var(--ph-accent) !important;
+	border-color: var(--ph-accent) !important;
+}
+
+/* Progress bars */
+.dark-theme [class*="Progress"],
+.dark-theme [class*="progress"] {
+	background-color: var(--ph-bg-tertiary) !important;
+}
+
+/* Empty states */
+.dark-theme [class*="Empty"],
+.dark-theme [class*="empty"],
+.dark-theme [class*="NoResults"],
+.dark-theme [class*="noResults"] {
+	color: var(--ph-text-muted) !important;
+}
+
+/* Promoted/Sponsored content */
+.dark-theme [class*="Promoted"],
+.dark-theme [class*="promoted"],
+.dark-theme [class*="Sponsored"],
+.dark-theme [class*="sponsored"],
+.dark-theme [class*="Ad "],
+.dark-theme [class*="ad-"] {
+	background-color: var(--ph-bg-tertiary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Leaderboard/Rankings */
+.dark-theme [class*="Leaderboard"],
+.dark-theme [class*="leaderboard"],
+.dark-theme [class*="Ranking"],
+.dark-theme [class*="ranking"] {
+	background-color: var(--ph-bg-secondary) !important;
+}
+
+/* User profiles */
+.dark-theme [class*="Profile"],
+.dark-theme [class*="profile"],
+.dark-theme [class*="User"],
+.dark-theme [class*="user"] {
+	color: var(--ph-text-primary) !important;
+}
+
+/* Comments section */
+.dark-theme [class*="Comments"],
+.dark-theme [class*="comments"],
+.dark-theme [class*="Discussion"],
+.dark-theme [class*="discussion"] {
+	background-color: var(--ph-bg-primary) !important;
+}
+
+/* Rich text / content */
+.dark-theme [class*="RichText"],
+.dark-theme [class*="richText"],
+.dark-theme [class*="Content"],
+.dark-theme [class*="content"] {
+	color: var(--ph-text-primary) !important;
+}
+
+/* Force dark on specific Product Hunt branded elements */
+.dark-theme [class*="styles_"],
+.dark-theme [class*="__"],
+.dark-theme [class^="sc-"] {
+	color: inherit !important;
+}
+
+/* Force bright text on product list taglines */
+.dark-theme [class*="text-light-gray"],
+.dark-theme [class*="text-gray"],
+.dark-theme [class*="text-dark-gray"],
+.dark-theme [style*="color: rgb(107"],
+.dark-theme [style*="color: rgb(128"],
+.dark-theme [style*="color: rgb(156"] {
+	color: #d8d8e0 !important;
+}
+
+/* Override any gray text to be readable */
+.dark-theme *[class*="gray"],
+.dark-theme *[class*="Grey"],
+.dark-theme *[class*="muted"] {
+	color: #c8c8d0 !important;
+}
+
+/* Tailwind utility class overrides for Product Hunt */
+.dark-theme .bg-primary,
+.dark .bg-primary {
+	background-color: var(--ph-bg-secondary) !important;
+}
+
+.dark-theme .bg-indigo-25,
+.dark .bg-indigo-25 {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+.dark-theme .bg-gray-50,
+.dark .bg-gray-50 {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+.dark-theme .border-light-blue,
+.dark .border-light-blue {
+	border-color: var(--ph-border) !important;
+}
+
+.dark-theme .text-secondary,
+.dark .text-secondary {
+	color: var(--ph-text-secondary) !important;
+}
+
+.dark-theme .text-primary,
+.dark .text-primary {
+	color: var(--ph-text-primary) !important;
+}
+
+.dark-theme .text-dark-gray,
+.dark .text-dark-gray {
+	color: var(--ph-text-secondary) !important;
+}
+
+.dark-theme .hover\:bg-indigo-25:hover,
+.dark .hover\:bg-indigo-25:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+.dark-theme .hover\:bg-gray-50:hover,
+.dark .hover\:bg-gray-50:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Dropdown modal border for visibility */
+.dark-theme .shadow-lg,
+.dark .shadow-lg {
+	border: 1px solid rgba(255, 255, 255, 0.15) !important;
+	box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark-theme .rounded-lg.bg-primary,
+.dark .rounded-lg.bg-primary {
+	border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Submenu items - remove gradient background */
+.dark-theme [class*="styles-module"][style*="--submenu-item-background"],
+.dark .bg-\[image\:var\(--submenu-item-background\)\],
+.dark-theme .bg-\[image\:var\(--submenu-item-background\)\] {
+	background-image: none !important;
+	background: transparent !important;
+}
+
+/* Submenu item hover state */
+.dark-theme [class*="styles-module"]:hover,
+.dark .hover\:bg-gray-50:hover {
+	background-color: var(--ph-bg-hover) !important;
+	background-image: none !important;
+}
+
+/* Icon containers with inline light backgrounds */
+.dark-theme .size-11[style*="background-color"],
+.dark-theme .flex.size-11[style],
+.dark-theme div[style*="background-color: rgb(255"],
+.dark-theme div[style*="background-color:#ff"],
+.dark-theme div[style*="background-color:#e"],
+.dark-theme div[style*="background-color: rgb(229"] {
+	background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ==================== PRODUCT PAGE STYLES ==================== */
+
+/* Product page hero/header gradient - remove and darken */
+.dark-theme [style*="linear-gradient"],
+.dark-theme [style*="background: linear"],
+.dark-theme [style*="background-image: linear"],
+.dark-theme [style*="background: rgb(255"],
+.dark-theme [style*="background-color: rgb(255"],
+.dark-theme div[style*="--product-color"],
+.dark-theme [class*="bg-gradient"],
+.dark-theme .from-white,
+.dark-theme .to-white,
+.dark-theme [class*="from-"],
+.dark-theme [class*="to-"] {
+	background: var(--ph-bg-secondary) !important;
+	background-image: none !important;
+	--tw-gradient-from: var(--ph-bg-secondary) !important;
+	--tw-gradient-to: var(--ph-bg-primary) !important;
+}
+
+/* Product page header section */
+.dark-theme [class*="ProductHeader"],
+.dark-theme [class*="productHeader"],
+.dark-theme [class*="HeroSection"],
+.dark-theme [class*="heroSection"],
+.dark-theme [class*="Hero"],
+.dark-theme [class*="hero"] {
+	background: var(--ph-bg-secondary) !important;
+	background-image: none !important;
+}
+
+/* Visit button on product page */
+.dark-theme a[href*="?ref=producthunt"],
+.dark-theme [class*="VisitButton"],
+.dark-theme [class*="visitButton"] {
+	background-color: var(--ph-accent) !important;
+	color: #fff !important;
+	border-color: var(--ph-accent) !important;
+}
+
+/* Product info banner "This is the 2nd launch..." */
+.dark-theme [class*="LaunchBanner"],
+.dark-theme [class*="launchBanner"],
+.dark-theme [class*="Banner"],
+.dark-theme [class*="banner"]:not([class*="cookie"]) {
+	background-color: var(--ph-bg-tertiary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Product tags */
+.dark-theme [href*="/topics/"],
+.dark-theme [class*="TopicTag"],
+.dark-theme [class*="topicTag"],
+.dark-theme [class*="LaunchTag"],
+.dark-theme [class*="launchTag"] {
+	background-color: var(--ph-bg-tertiary) !important;
+	color: var(--ph-text-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Product cards/slides in carousel */
+.dark-theme [class*="Carousel"],
+.dark-theme [class*="carousel"],
+.dark-theme [class*="Slider"],
+.dark-theme [class*="slider"],
+.dark-theme [class*="Slide"],
+.dark-theme [class*="slide"] {
+	background-color: transparent !important;
+}
+
+/* Sidebar sections */
+.dark-theme [class*="Sidebar"] section,
+.dark-theme [class*="sidebar"] section,
+.dark-theme aside section {
+	background-color: transparent !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Company info, social links sections */
+.dark-theme [class*="CompanyInfo"],
+.dark-theme [class*="companyInfo"],
+.dark-theme [class*="SocialLinks"],
+.dark-theme [class*="socialLinks"] {
+	color: var(--ph-text-primary) !important;
+}
+
+/* Force dark background on any remaining light elements */
+.dark-theme [class*="bg-white"],
+.dark-theme [class*="bg-light"],
+.dark-theme [class*="bgWhite"],
+.dark-theme [class*="bgLight"],
+.dark-theme [class*="white-bg"],
+.dark-theme [class*="light-bg"],
+.dark-theme [class*="surface"],
+.dark-theme [class*="Surface"],
+.dark-theme [class*="styles_leftColumn"],
+.dark-theme [class*="styles_rightColumn"],
+.dark-theme [class*="styles_column"],
+.dark-theme [class*="styles_panel"],
+.dark-theme [class*="styles_content"],
+.dark-theme [class*="styles_container"],
+.dark-theme [class*="styles_wrapper"],
+.dark-theme [class*="styles_list"],
+.dark-theme [class*="styles_item"],
+.dark-theme [class*="styles_row"],
+.dark-theme [class*="styles_section"],
+.dark-theme [class*="LeftColumn"],
+.dark-theme [class*="RightColumn"],
+.dark-theme [class*="leftColumn"],
+.dark-theme [class*="rightColumn"] {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+/* Navigation panel backgrounds */
+.dark-theme header > div > div,
+.dark-theme nav > div > div,
+.dark-theme [class*="header"] > div,
+.dark-theme [class*="Header"] > div {
+	background-color: transparent !important;
+}
+
+/* Fix any portal/overlay content */
+.dark-theme [id*="portal"],
+.dark-theme [id*="Portal"],
+.dark-theme [class*="portal"],
+.dark-theme [class*="Portal"],
+.dark-theme [id*="radix"],
+.dark-theme [data-radix-portal] {
+	background-color: transparent !important;
+}
+
+.dark-theme [id*="portal"] > div,
+.dark-theme [id*="Portal"] > div,
+.dark-theme [class*="portal"] > div,
+.dark-theme [class*="Portal"] > div,
+.dark-theme [data-radix-portal] > div {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* SVG icons */
+.dark-theme svg {
+	color: inherit !important;
+}
+
+.dark-theme svg path[fill="#000"],
+.dark-theme svg path[fill="black"],
+.dark-theme svg path[fill="#1a1a1a"] {
+	fill: var(--ph-text-primary) !important;
+}
+
+/* AGGRESSIVE: Fix floating panels/dropdowns with white background */
+.dark-theme div[style*="position: absolute"],
+.dark-theme div[style*="position: fixed"],
+.dark-theme div[style*="position:absolute"],
+.dark-theme div[style*="position:fixed"] {
+	background-color: var(--ph-bg-secondary) !important;
+	border-color: var(--ph-border) !important;
+}
+
+/* Categories dropdown panel - force dark */
+.dark-theme [class*="categories"],
+.dark-theme [class*="Categories"],
+.dark-theme [class*="trending"],
+.dark-theme [class*="Trending"] {
+	background-color: var(--ph-bg-secondary) !important;
+}
+
+.dark-theme [class*="categories"] *,
+.dark-theme [class*="Categories"] *,
+.dark-theme [class*="trending"] a,
+.dark-theme [class*="Trending"] a {
+	color: var(--ph-text-primary) !important;
+}
+
+/* NUCLEAR OPTION: Force ALL backgrounds in dropdowns to be dark */
+.dark-theme [data-radix-portal] *,
+.dark-theme [id*="radix"] *,
+.dark-theme [class*="Popover"] *,
+.dark-theme [class*="popover"] *,
+.dark-theme [class*="Dropdown"] *,
+.dark-theme [class*="dropdown"] *,
+.dark-theme [class*="Flyout"] *,
+.dark-theme [class*="flyout"] *,
+.dark-theme [class*="Menu"]:not(nav):not(header) *,
+.dark-theme [class*="menu"]:not(nav):not(header) * {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+/* Then set the container backgrounds */
+.dark-theme [data-radix-portal] > div,
+.dark-theme [data-radix-portal] > div > div,
+.dark-theme [data-radix-portal] > div > div > div {
+	background-color: var(--ph-bg-secondary) !important;
+	background: var(--ph-bg-secondary) !important;
+}
+
+/* Hover states in dropdown */
+.dark-theme [data-radix-portal] [class*="hover"],
+.dark-theme [data-radix-portal] *:hover,
+.dark-theme [class*="Dropdown"] *:hover,
+.dark-theme [class*="Menu"]:not(nav) *:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Active/selected states in dropdown - these often have light backgrounds */
+.dark-theme [class*="active"],
+.dark-theme [class*="Active"],
+.dark-theme [class*="selected"],
+.dark-theme [class*="Selected"],
+.dark-theme [aria-selected="true"],
+.dark-theme [data-state="active"],
+.dark-theme [data-state="checked"],
+.dark-theme [data-highlighted] {
+	background-color: var(--ph-bg-hover) !important;
+	background: var(--ph-bg-hover) !important;
+	color: var(--ph-text-primary) !important;
+}
+
+/* Specific fix for category list items with light backgrounds */
+.dark-theme ul li,
+.dark-theme ol li,
+.dark-theme [role="listitem"],
+.dark-theme [class*="ListItem"],
+.dark-theme [class*="listItem"] {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+/* Any li or list item hover */
+.dark-theme ul li:hover,
+.dark-theme ol li:hover,
+.dark-theme [role="listitem"]:hover {
+	background-color: var(--ph-bg-hover) !important;
+}
+
+/* Any white background override */
+.dark-theme div[style*="background: white"],
+.dark-theme div[style*="background: #fff"],
+.dark-theme div[style*="background: rgb(255"],
+.dark-theme div[style*="background-color: white"],
+.dark-theme div[style*="background-color: #fff"],
+.dark-theme div[style*="background-color: rgb(255"] {
+	background-color: var(--ph-bg-secondary) !important;
+}
+
+/* AGGRESSIVE: Ensure ALL text is readable on dark background */
+/* Target any element with dark gray inline color */
+.dark-theme [style*="color"],
+.dark-theme [style*="Color"] {
+	color: #d0d0d8 !important;
+}
+
+/* Product Hunt specific: product item taglines */
+.dark-theme div[class] > a[href*="/posts/"] + div,
+.dark-theme a[href*="/posts/"] ~ div:not([class*="vote"]):not([class*="Vote"]) {
+	color: #d8d8e0 !important;
+}
+
+/* Catch remaining low-contrast text */
+.dark-theme span:not([class*="icon"]):not([class*="Icon"]),
+.dark-theme div > span {
+	color: inherit !important;
+}
+
+/* Force all paragraph and description-like elements to be bright */
+.dark-theme p,
+.dark-theme [class*="Tagline"],
+.dark-theme [class*="tagline"],
+.dark-theme [class*="Desc"],
+.dark-theme [class*="desc"] {
+	color: #dcdce4 !important;
+}
+
+
+.dark-theme [data-test="add-email-btn"] {
+	background-color: var(--ph-accent) !important;
+	color: #fff !important;
+	border-color: var(--ph-accent) !important;
+}
